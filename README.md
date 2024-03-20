@@ -12,7 +12,7 @@ The fine-tuned model can be found [here](https://huggingface.co/hussenmi/fungpt-
 
 ## Description of the Fine-Tuning Approach
 
-There are a couple of different methods to fine-tune a Large Language Model (LLM). One common method is \textbf{full fine-tuning}. The process results in a new version of the model with updated weights. One caveat with this process is that full fine-tuning requires enough memory and computing power to process all the gradients and other components being updated during training.
+There are a couple of different methods to fine-tune a Large Language Model (LLM). One common method is **full fine-tuning**. The process results in a new version of the model with updated weights. One caveat with this process is that full fine-tuning requires enough memory and computing power to process all the gradients and other components being updated during training.
 
 In order to work against this constraint, we have another method called \textbf{parameter-efficient fine-tuning}. In this method, we only update a small set of parameters, which saves us a lot of computational power and memory. One method of doing this is called LoRA **(Low-Rank Adaptation)**.
 
@@ -20,7 +20,7 @@ In order to work against this constraint, we have another method called \textbf{
 
 LoRA (Low-Rank Adaptation) is a method used for parameter-efficient fine-tuning of large language models. It is designed to update only a small set of parameters, reducing the computational power and memory requirements compared to full fine-tuning.
 
-The idea behind LoRA is to identify a subset of parameters in the model that can be updated to adapt the model to a specific task or domain. This subset of parameters is referred to as the ``target modules.'' By updating only these target modules, LoRA achieves parameter-efficient fine-tuning.
+The idea behind LoRA is to identify a subset of parameters in the model that can be updated to adapt the model to a specific task or domain. This subset of parameters is referred to as the "target modules." By updating only these target modules, LoRA achieves parameter-efficient fine-tuning.
 
 The key concept in LoRA is the low-rank approximation of the weight matrices in the target modules. Instead of updating the full weight matrices, LoRA decomposes them into low-rank factors. This decomposition reduces the number of parameters that need to be updated, resulting in significant memory and computational savings.
 
